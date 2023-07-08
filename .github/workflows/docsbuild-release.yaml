@@ -64,7 +64,7 @@ jobs:
       - name: Commit ansible-documenatation  and push the changes to github
         run: |
          cd ./ansible-documentation
-         git add ./docs/docsite/rst/porting_guides/"porting_guide_${{ inputs.ansible_version }}.rst"
+         git add ./docs/docsite/rst/porting_guides/"porting_guide_${{ inputs.ansible_major_version }}.rst"
          git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
          git push origin "publish-${{ inputs.ansible_version }}"
 
